@@ -83,7 +83,7 @@ myDataMelt <- melt(myData, id=c("subject","activity"), measure.vars=c("TimeBodyA
 subjectMeans <- dcast(myDataMelt, subject+activity ~ variable, mean)
 
 # output tidy data to 'data' folder
-write.table(subjectMeans, "./data/tidy_data.txt")
+write.table(subjectMeans, "./data/tidy_data.txt", row.names=FALSE)
 
 
 # TODO: calculate average value per subject/activity combo
